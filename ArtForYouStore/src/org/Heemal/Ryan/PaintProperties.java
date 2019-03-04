@@ -4,6 +4,7 @@ public class PaintProperties {
 	
 	private String Colour;
 	private String Type;
+	private String Brand;
 	
 	//Getters and Setters
 	public String getColour() {
@@ -17,6 +18,12 @@ public class PaintProperties {
 	}
 	public void setType(String type) {
 		Type = type;
+	}
+	public String getBrand() {
+		return Brand;
+	}
+	public void setBrand(String brand) {
+		Brand = brand;
 	}
 	
 	
