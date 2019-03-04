@@ -3,21 +3,21 @@
 
 <beans>
 	<bean id= "paintsection" class="org.Heemal.Ryan.PaintSection">
-		<property name= "Paint_Colour" ref= "PaintColour" />
-		<property name= "Paint_Type" ref= "PaintType" />
-		<property name= "Paint_Brand" >
-			<bean class="org.Heemal.Ryan.PaintProperties">
-				<property name = "Brand" value ="Ryan Paints"/>
-			</bean>
+		<property name= "Paint_Properties">
+		<list>
+				<ref bean="PaintColour"/>
+				<ref bean="PaintColour2"/>				
+		</list>
 		</property>
 	</bean>
 	
-	<bean id= "PaintColour" class="org.Heemal.Ryan.PaintProperties"> 
+ 	<bean id= "PaintColour" class="org.Heemal.Ryan.PaintProperties"> 
 		<property name="Colour" value= "Red"/>
-	</bean>
-	<bean id= "PaintType" class="org.Heemal.Ryan.PaintProperties"> 
 		<property name="Type" value= "Gloss"/>
-	</bean>
-	
-	
+	</bean>	
+
+	 <bean id= "PaintColour2" class="org.Heemal.Ryan.PaintProperties"> 
+		<property name="Colour" value= "Blue"/>
+		<property name="Type" value= "Matte"/>
+	</bean>	
 </beans> 
